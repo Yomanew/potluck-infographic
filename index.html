@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Summer Potluck Playbook</title>
+    <title>25 Epic Summer Potluck Dishes | Infographic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,434 +12,282 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8fafc;
+            background-color: #f0f4f8;
         }
         .chart-container {
             position: relative;
             width: 100%;
-            height: 320px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
             max-height: 400px;
         }
         @media (min-width: 768px) {
             .chart-container {
-                height: 400px;
+                height: 350px;
             }
         }
-        .gradient-text {
-            background: linear-gradient(to right, #F94144, #F3722C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .flow-step {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            min-height: 100px;
-        }
         .flow-arrow {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: #577590;
-        }
-        .icon-unicode {
+            color: #FFD166;
             font-size: 2rem;
             line-height: 1;
         }
     </style>
 </head>
-<body class="text-gray-700">
+<body class="text-gray-800">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <h1 class="text-xl md:text-2xl font-bold text-[#F94144]">Potluck Playbook</h1>
-            <div class="hidden md:flex space-x-6 text-sm font-semibold">
-                <a href="#overview" class="hover:text-[#F3722C] transition-colors">Overview</a>
-                <a href="#salads" class="hover:text-[#F3722C] transition-colors">Salads</a>
-                <a href="#sides" class="hover:text-[#F3722C] transition-colors">Sides</a>
-                <a href="#grilled" class="hover:text-[#F3722C] transition-colors">Grilled</a>
-                <a href="#desserts" class="hover:text-[#F3722C] transition-colors">Desserts</a>
-            </div>
-        </nav>
-    </header>
+    <div class="container mx-auto p-4 md:p-8">
 
-    <main class="container mx-auto p-4 md:p-8">
-        
-        <section class="text-center mb-16">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">
-                <span class="gradient-text">Wow-Worthy</span> Summer Potlucks
-            </h1>
-            <p class="max-w-3xl mx-auto text-gray-600">An infographic guide to the 25 best dishes to bring to your next summer gathering, based on the ultimate potluck article.</p>
-            <p class="max-w-3xl mx-auto text-lg italic text-[#577590] mt-6 border-l-4 border-[#F9C74F] pl-4">"The best dishes are often the simplest ones, made with fresh, seasonal ingredients. Think bright, bold, and easy to serve." - Ina Garten</p>
-        </section>
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#073B4C] mb-2">The Ultimate Summer Potluck Playbook</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Turn your next potluck into a feast to remember! Here's a visual guide to 25 unforgettable dishes your friends will beg you for.</p>
+        </header>
 
-        <section id="overview" class="mb-20 scroll-mt-24">
-            <h2 class="text-3xl font-bold text-center mb-8">Potluck at a Glance</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 text-center">Recipe Categories Breakdown</h3>
-                    <p class="text-center text-gray-600 mb-4">The 25 featured recipes span five distinct categories, with Hearty & Satisfying Sides making up the largest portion of the recommendations.</p>
-                    <div class="chart-container max-w-sm mx-auto">
-                        <canvas id="categoryDonutChart"></canvas>
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <section class="lg:col-span-3 bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-center text-center">
+                <div class="mb-4 md:mb-0 md:mr-8">
+                     <p class="text-7xl font-bold text-[#FF6B6B]">🍽️</p>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-[#073B4C] mb-2">The Power of a Shared Meal</h2>
+                    <p class="text-gray-700 italic max-w-2xl">"Communal eating increases social bonding and feelings of wellbeing... The more often people eat with others, the more likely they are to feel happy and satisfied with their lives."</p>
+                    <p class="text-sm text-gray-500 mt-2">- University of Oxford Study</p>
+                </div>
+            </section>
+            
+            <section class="lg:col-span-2 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center text-[#073B4C] mb-4">What's on the Menu? A Look at the Spread</h2>
+                <p class="text-center text-gray-600 mb-6">A great potluck has a balanced mix of dishes. Our list of 25 recipes covers all the bases, with a strong focus on fresh, vibrant salads perfect for summer.</p>
+                <div class="chart-container h-[350px] md:h-[400px] max-w-lg">
+                    <canvas id="dishCategoryChart"></canvas>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center text-[#073B4C] mb-4">Estimated Prep Times</h2>
+                 <p class="text-center text-gray-600 mb-6">Need something quick? Many of these dishes can be prepared in under 30 minutes, giving you more time to enjoy the party.</p>
+                <div class="chart-container h-[350px] md:h-[400px]">
+                    <canvas id="prepTimeChart"></canvas>
+                </div>
+            </section>
+
+            <section class="lg:col-span-3 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center text-[#073B4C] mb-6">Deconstructing a Crowd-Pleaser: 7-Layer Dip</h2>
+                <p class="text-center text-gray-600 mb-8">Flowcharts aren't just for business! Here's how to build the perfect 7-Layer Mediterranean Dip, from the base to the garnish. This structured approach ensures every scoop is delicious.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="text-center p-3 bg-gray-100 rounded-lg shadow-sm">
+                        <p class="font-bold text-[#073B4C]">1. Hummus</p>
+                        <p class="text-sm">The Foundation</p>
+                    </div>
+                    <div class="flow-arrow transform md:-rotate-0">↓</div>
+                    <div class="text-center p-3 bg-gray-100 rounded-lg shadow-sm">
+                        <p class="font-bold text-[#073B4C]">2. Tzatziki</p>
+                        <p class="text-sm">Creamy Layer</p>
+                    </div>
+                     <div class="flow-arrow transform md:-rotate-0">↓</div>
+                    <div class="text-center p-3 bg-gray-100 rounded-lg shadow-sm">
+                        <p class="font-bold text-[#073B4C]">3. Cucumber</p>
+                         <p class="text-sm">Cool & Crisp</p>
+                    </div>
+                     <div class="flow-arrow transform md:-rotate-0">↓</div>
+                     <div class="text-center p-3 bg-gray-100 rounded-lg shadow-sm">
+                        <p class="font-bold text-[#073B4C]">4. Tomatoes</p>
+                        <p class="text-sm">Fresh & Juicy</p>
+                    </div>
+                    <div class="flow-arrow transform md:-rotate-0">↓</div>
+                     <div class="text-center p-3 bg-gray-100 rounded-lg shadow-sm">
+                        <p class="font-bold text-[#073B4C]">5. Olives</p>
+                        <p class="text-sm">Salty Bite</p>
+                    </div>
+                     <div class="flow-arrow transform md:-rotate-0">↓</div>
+                     <div class="text-center p-3 bg-gray-100 rounded-lg shadow-sm">
+                        <p class="font-bold text-[#073B4C]">6. Feta</p>
+                        <p class="text-sm">Tangy Finish</p>
+                    </div>
+                     <div class="flow-arrow transform md:-rotate-0">↓</div>
+                     <div class="text-center p-3 bg-gray-100 rounded-lg shadow-sm">
+                        <p class="font-bold text-[#073B4C]">7. Parsley</p>
+                        <p class="text-sm">Fresh Garnish</p>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 text-center">Dish Decision Matrix</h3>
-                    <p class="text-center text-gray-600 mb-4">Use this matrix from the article to quickly select a dish type based on your needs, from quick prep to make-ahead convenience.</p>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm text-left">
-                            <thead class="bg-[#43AA8B] text-white">
-                                <tr>
-                                    <th scope="col" class="px-4 py-3 rounded-tl-lg">Category</th>
-                                    <th scope="col" class="px-4 py-3">Prep Time</th>
-                                    <th scope="col" class="px-4 py-3">Best For...</th>
-                                    <th scope="col" class="px-4 py-3 rounded-tr-lg">Key Feature</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b">
-                                    <td class="px-4 py-3 font-semibold">Salads</td>
-                                    <td class="px-4 py-3">15-30 mins</td>
-                                    <td class="px-4 py-3">Hot Days</td>
-                                    <td class="px-4 py-3">Fresh & Crisp</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="px-4 py-3 font-semibold">Grilled Items</td>
-                                    <td class="px-4 py-3">30-60 mins</td>
-                                    <td class="px-4 py-3">BBQ Lovers</td>
-                                    <td class="px-4 py-3">Smoky & Flavorful</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="px-4 py-3 font-semibold">Cold Sides</td>
-                                    <td class="px-4 py-3">20-40 mins</td>
-                                    <td class="px-4 py-3">Make-Ahead</td>
-                                    <td class="px-4 py-3">No Reheating</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-3 font-semibold">Desserts</td>
-                                    <td class="px-4 py-3">10-60 mins</td>
-                                    <td class="px-4 py-3">Sweet Tooths</td>
-                                    <td class="px-4 py-3">Crowd-Pleaser</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            </section>
+            
+            <section class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center">
+                <h3 class="text-xl font-bold text-center text-[#073B4C] mb-4">🏆 Potluck Pro-Tip</h3>
+                 <div class="text-center">
+                    <p class="text-5xl mb-2">🗓️</p>
+                    <p class="text-gray-700">Many dishes, like Cowboy Caviar or pasta salads, taste even <strong class="text-[#118AB2]">better</strong> when made a day ahead. This gives the flavors time to meld and saves you time on party day!</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="salads" class="mb-20 scroll-mt-24">
-            <h2 class="text-3xl font-bold text-center mb-2">Sensational Salads</h2>
-            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">These salads focus on fresh ingredients and vibrant flavors. This chart compares their complexity by the approximate number of core components in each recipe.</p>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <div class="chart-container max-w-4xl mx-auto">
-                    <canvas id="saladBarChart"></canvas>
+            <section class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center">
+                <h3 class="text-xl font-bold text-center text-[#073B4C] mb-4">🥗 Salad Secret</h3>
+                 <div class="text-center">
+                     <p class="text-5xl mb-2">แยก</p>
+                    <p class="text-gray-700">To avoid soggy greens, always transport your salad dressing in a <strong class="text-[#06D6A0]">separate, leak-proof container.</strong> Toss everything together just before serving to keep it crisp and fresh.</p>
                 </div>
-            </div>
-        </section>
+            </section>
+            
+            <section class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center">
+                 <h3 class="text-xl font-bold text-center text-[#073B4C] mb-4">❄️ Keep it Cool</h3>
+                 <div class="text-center">
+                    <p class="text-5xl mb-2">🧊</p>
+                    <p class="text-gray-700">For cold dishes, keep them in a cooler with ice packs. At the party, place your serving bowl inside a <strong class="text-[#FFD166]">larger bowl filled with ice</strong> to maintain the perfect temperature.</p>
+                </div>
+            </section>
 
-        <section id="sides" class="mb-20 scroll-mt-24">
-            <h2 class="text-3xl font-bold text-center mb-2">Hearty & Satisfying Sides</h2>
-            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">From creamy to crunchy, these sides are the backbone of the potluck. Here they are ranked by ingredient count, from simplest to most complex.</p>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                 <div class="chart-container max-w-4xl mx-auto">
-                    <canvas id="sidesHorizontalBarChart"></canvas>
-                </div>
-            </div>
-        </section>
-        
-        <section id="grilled" class="mb-20 scroll-mt-24">
-            <h2 class="text-3xl font-bold text-center mb-2">Fire Up the Grill</h2>
-             <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Bringing smoky, grilled flavor elevates any potluck. The Pulled Pork Sliders recipe follows a simple slow-cooker process, perfect for preparing ahead of time.</p>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold mb-6 text-center">Path to Perfect Pulled Pork Sliders</h3>
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
-                    <div class="flow-step bg-[#90BE6D] text-white">1. Layer onion & pork in slow cooker.</div>
-                    <div class="flow-arrow hidden md:flex">➔</div>
-                    <div class="flow-step bg-[#43AA8B] text-white">2. Pour over BBQ sauce mixture.</div>
-                    <div class="flow-arrow hidden md:flex">➔</div>
-                    <div class="flow-step bg-[#577590] text-white">3. Cook low 8-10 hrs until tender.</div>
-                    <div class="col-span-1 md:col-span-5 flow-arrow">⬇</div>
-                    <div class="md:col-start-2 flow-step bg-[#F9C74F] text-gray-800">4. Shred pork & return to sauce.</div>
-                    <div class="flow-arrow hidden md:flex">➔</div>
-                    <div class="flow-step bg-[#F3722C] text-white">5. Serve warm on slider buns with slaw.</div>
-                </div>
-            </div>
-        </section>
+        </main>
 
-        <section id="desserts" class="mb-20 scroll-mt-24">
-            <h2 class="text-3xl font-bold text-center mb-2">No-Sweat Desserts</h2>
-            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Every potluck needs a sweet finish. This radar chart compares five recommended desserts across key flavor and texture profiles to help you pick the perfect one.</p>
-            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-                <div class="lg:col-span-3 bg-white p-6 rounded-lg shadow-lg">
-                    <div class="chart-container max-w-xl mx-auto">
-                        <canvas id="dessertRadarChart"></canvas>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 space-y-3 text-sm">
-                    <h3 class="text-xl font-semibold mb-2">Profile Key</h3>
-                    <p><strong><span class="text-[#F94144]">■</span> No-Bake Eclair Cake:</strong> Max creamy, high chocolate, no-bake.</p>
-                    <p><strong><span class="text-[#F3722C]">■</span> Easiest Fruit Pizza:</strong> Top for fruitiness, balanced cream & crunch.</p>
-                    <p><strong><span class="text-[#F9C74F]">■</span> S'mores Bars:</strong> A gooey, chocolatey, crunchy powerhouse.</p>
-                    <p><strong><span class="text-[#90BE6D]">■</span> Strawberry Pretzel Salad:</strong> Uniquely salty, crunchy, creamy, and fruity.</p>
-                    <p><strong><span class="text-[#43AA8B]">■</span> Chocolate Lasagna:</strong> The ultimate no-bake chocolate & cream dessert.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="drinks" class="mb-20 scroll-mt-24">
-            <h2 class="text-3xl font-bold text-center mb-8">Thirst Quenchers & Pro Tips</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                     <h3 class="text-xl font-semibold mb-4 text-center">Don't Forget the Drinks!</h3>
-                     <p class="text-center text-gray-600 mb-6">A big batch of a refreshing beverage is always a welcome addition.</p>
-                     <ul class="space-y-4">
-                         <li class="flex items-center space-x-4">
-                            <div class="icon-unicode">🍓</div>
-                            <div>
-                                <h4 class="font-semibold">Sparkling Raspberry Lemonade</h4>
-                                <p class="text-sm text-gray-600">A beautiful and fresh alternative to store-bought.</p>
-                            </div>
-                         </li>
-                         <li class="flex items-center space-x-4">
-                            <div class="icon-unicode">🍋</div>
-                             <div>
-                                <h4 class="font-semibold">Classic Southern Sweet Tea</h4>
-                                <p class="text-sm text-gray-600">A non-negotiable for many summer parties.</p>
-                            </div>
-                         </li>
-                         <li class="flex items-center space-x-4">
-                            <div class="icon-unicode">🍊</div>
-                             <div>
-                                <h4 class="font-semibold">Non-Alcoholic Sangria</h4>
-                                <p class="text-sm text-gray-600">Fruity, festive, and fun for all ages.</p>
-                            </div>
-                         </li>
-                     </ul>
-                 </div>
-                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold mb-4 text-center">Top Potluck Pro-Tips</h3>
-                    <ul class="space-y-4 list-disc list-inside text-gray-700">
-                        <li><strong>Transport Smart:</strong> Use coolers with ice packs for cold dishes. Wrap hot dishes in towels inside an insulated carrier.</li>
-                        <li><strong>Label Everything:</strong> Bring a small card listing the main ingredients to help guests with allergies or dietary restrictions.</li>
-                        <li><strong>Feta Choice:</strong> For the best flavor and texture in salads, always buy feta cheese in a block packed in brine, not pre-crumbled.</li>
-                        <li><strong>Plan for Temperature:</strong> To keep dishes at the right temperature on the buffet, place cold bowls in a larger bowl of ice. Use a slow cooker on "warm" for hot dishes.</li>
-                    </ul>
-                 </div>
-            </div>
-        </section>
+        <footer class="text-center mt-12">
+            <p class="text-gray-600">Now you're ready to be the star of the show. Happy cooking!</p>
+            <p class="text-sm text-gray-400 mt-2">Infographic created based on the "25 Potluck Dishes" article. All data is derived from the source material.</p>
+        </footer>
 
-    </main>
-    
-    <footer class="bg-[#577590] text-white text-center p-6 mt-8">
-        <p>Infographic created by Canvas Infographics.</p>
-        <p class="text-sm opacity-80">Data sourced from "25 Wow-Worthy Summer Potluck Dishes".</p>
-    </footer>
+    </div>
 
     <script>
-        const wrapLabel = (label, maxWidth) => {
-            if (label.length <= maxWidth) {
-                return label;
+        function wrapLabel(str, max_width) {
+            if (str.length <= max_width) {
+                return str;
             }
-            const words = label.split(' ');
+            const words = str.split(' ');
             const lines = [];
-            let currentLine = '';
-            words.forEach(word => {
-                if ((currentLine + ' ' + word).trim().length > maxWidth) {
-                    lines.push(currentLine.trim());
-                    currentLine = word;
+            let current_line = '';
+            for (const word of words) {
+                if ((current_line + ' ' + word).length > max_width) {
+                    lines.push(current_line);
+                    current_line = word;
                 } else {
-                    currentLine = (currentLine + ' ' + word).trim();
+                    current_line = current_line ? current_line + ' ' + word : word;
                 }
-            });
-            lines.push(currentLine.trim());
+            }
+            if (current_line) {
+                lines.push(current_line);
+            }
             return lines;
+        }
+
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
         };
 
-        const chartTooltipConfig = {
+        const sharedChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
-                tooltip: {
-                    callbacks: {
-                        title: function(tooltipItems) {
-                            const item = tooltipItems[0];
-                            let label = item.chart.data.labels[item.dataIndex];
-                            if (Array.isArray(label)) {
-                              return label.join(' ');
-                            }
-                            return label;
-                        }
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            family: "'Poppins', sans-serif",
+                            size: 12,
+                        },
+                        color: '#073B4C',
                     }
                 },
-                legend: {
-                    labels: {
-                         boxWidth: 20,
-                    }
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: '#073B4C',
+                    titleFont: {
+                        family: "'Poppins', sans-serif",
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    bodyFont: {
+                         family: "'Poppins', sans-serif",
+                    },
                 }
             },
-            maintainAspectRatio: false,
-            responsive: true,
         };
 
-        const colors = {
-            red: '#F94144',
-            orange: '#F3722C',
-            amber: '#F8961E',
-            yellow: '#F9C74F',
-            pistachio: '#90BE6D',
-            green: '#43AA8B',
-            blueGray: '#577590'
-        };
-
-        const potluckColors = [colors.red, colors.orange, colors.amber, colors.pistachio, colors.green];
-
-        new Chart(document.getElementById('categoryDonutChart'), {
+        const dishCategoryCtx = document.getElementById('dishCategoryChart').getContext('2d');
+        new Chart(dishCategoryCtx, {
             type: 'doughnut',
             data: {
-                labels: ['Salads', 'Hearty Sides', 'Grilled', 'Desserts', 'Drinks'],
+                labels: ['Refreshing Salads', 'Hearty Main Dishes', 'Appetizers & Dips', 'Savory Side Dishes', 'Sweet Desserts'],
                 datasets: [{
-                    label: 'Recipe Count',
-                    data: [5, 8, 4, 5, 3],
-                    backgroundColor: potluckColors,
+                    label: '# of Recipes',
+                    data: [7, 6, 5, 4, 3],
+                    backgroundColor: [
+                        '#06D6A0', 
+                        '#FF6B6B', 
+                        '#FFD166',
+                        '#118AB2',
+                        '#073B4C'  
+                    ],
                     borderColor: '#ffffff',
-                    borderWidth: 2,
+                    borderWidth: 3
                 }]
             },
-            options: chartTooltipConfig
-        });
-
-        new Chart(document.getElementById('saladBarChart'), {
-            type: 'bar',
-            data: {
-                labels: [
-                    wrapLabel('Classic Caprese Salad', 16),
-                    wrapLabel('Quinoa & Black Bean Salad', 16),
-                    wrapLabel('Creamy Cucumber Salad', 16),
-                    wrapLabel('Watermelon, Feta & Mint', 16),
-                    wrapLabel('Asian Ramen Noodle Slaw', 16)
-                ],
-                datasets: [{
-                    label: 'Number of Core Components',
-                    data: [4, 6, 4, 3, 5],
-                    backgroundColor: colors.pistachio,
-                    borderColor: colors.green,
-                    borderWidth: 1
-                }]
-            },
-            options: { ...chartTooltipConfig,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 1
-                        }
-                    }
-                }
+            options: {
+                 ...sharedChartOptions,
+                 cutout: '60%',
             }
         });
 
-        new Chart(document.getElementById('sidesHorizontalBarChart'), {
+        const prepTimeCtx = document.getElementById('prepTimeChart').getContext('2d');
+        new Chart(prepTimeCtx, {
             type: 'bar',
             data: {
                 labels: [
                     wrapLabel('Caprese Skewers', 16),
-                    wrapLabel('Grilled Corn on the Cob', 16),
-                    wrapLabel('Broccoli Salad', 16),
-                    wrapLabel('The Best-Ever Potato Salad', 16),
-                    wrapLabel('Easy Pasta Salad', 16),
-                    wrapLabel('Seven-Layer Dip', 16),
-                    wrapLabel('Baked Beans with Smoky Twist', 16),
-                    wrapLabel('Cowboy Caviar (Texas Caviar)', 16),
-                ].reverse(),
+                    wrapLabel('Loaded Cowboy Caviar Dip', 16),
+                    wrapLabel('Sheet Pan Lemon Herb Salmon', 16),
+                    wrapLabel('Fluffy Dinner Rolls', 16)
+                ],
                 datasets: [{
-                    label: 'Number of Ingredients',
-                    data: [4, 6, 7, 9, 9, 9, 9, 10].reverse(),
-                    backgroundColor: colors.amber,
-                    borderColor: colors.orange,
-                    borderWidth: 1
+                    label: 'Estimated Prep Time (minutes)',
+                    data: [15, 20, 25, 150],
+                    backgroundColor: [
+                        '#06D6A0',
+                        '#FFD166',
+                        '#FF6B6B',
+                        '#118AB2'
+                    ],
+                    borderRadius: 5,
                 }]
             },
-            options: { ...chartTooltipConfig,
+            options: {
+                ...sharedChartOptions,
                 indexAxis: 'y',
                 scales: {
                     x: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-        
-        new Chart(document.getElementById('dessertRadarChart'), {
-            type: 'radar',
-            data: {
-                labels: ['No-Bake', 'Fruity', 'Chocolatey', 'Creamy', 'Crunchy'],
-                datasets: [
-                    {
-                        label: 'No-Bake Eclair Cake',
-                        data: [5, 0, 4, 5, 1],
-                        fill: true,
-                        backgroundColor: 'rgba(249, 65, 68, 0.2)',
-                        borderColor: colors.red,
-                        pointBackgroundColor: colors.red,
-                    },
-                    {
-                        label: 'Easiest Fruit Pizza',
-                        data: [1, 5, 0, 4, 2],
-                        fill: true,
-                        backgroundColor: 'rgba(243, 114, 44, 0.2)',
-                        borderColor: colors.orange,
-                        pointBackgroundColor: colors.orange,
-                    },
-                    {
-                        label: 'S\'mores Bars',
-                        data: [1, 0, 5, 2, 4],
-                        fill: true,
-                        backgroundColor: 'rgba(249, 199, 79, 0.2)',
-                        borderColor: colors.yellow,
-                        pointBackgroundColor: colors.yellow,
-                    },
-                     {
-                        label: wrapLabel('Strawberry Pretzel Salad', 16),
-                        data: [1, 4, 0, 4, 4],
-                        fill: true,
-                        backgroundColor: 'rgba(144, 190, 109, 0.2)',
-                        borderColor: colors.pistachio,
-                        pointBackgroundColor: colors.pistachio,
-                    },
-                     {
-                        label: 'Chocolate Lasagna',
-                        data: [5, 0, 5, 5, 2],
-                        fill: true,
-                        backgroundColor: 'rgba(67, 170, 139, 0.2)',
-                        borderColor: colors.green,
-                        pointBackgroundColor: colors.green,
-                    }
-                ]
-            },
-            options: { ...chartTooltipConfig,
-                scales: {
-                    r: {
-                        angleLines: {
-                            display: true
-                        },
-                        suggestedMin: 0,
-                        suggestedMax: 5,
-                        pointLabels: {
-                            font: {
-                                size: 14,
-                                weight: 'bold'
-                            }
-                        },
                         ticks: {
-                           stepSize: 1
+                             color: '#073B4C',
+                        },
+                         grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        ticks: {
+                             color: '#073B4C',
+                        },
+                        grid: {
+                            color: '#e0e0e0'
                         }
                     }
+                },
+                plugins: {
+                    ...sharedChartOptions.plugins,
+                    legend: {
+                        display: false
+                    }
                 }
             }
         });
+
     </script>
+
 </body>
 </html>
